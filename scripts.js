@@ -22,16 +22,28 @@ let scoreCounter = ()=>{
 //start Game
 //interval = setInterval(scoreCounter,200);
 window.addEventListener("keydown", (start)=>{
-    
     if(start.code == "Space"){
         gameOver.style.display = "none";
         block.classList.add("blockActive");
         road.firstElementChild.style.animation = "roadAnimate 1.5s linear infinite";
-        cloud.firstElementChild.style.animation = "cloudAnimate 30s linear infinite";
+        cloud.firstElementChild.style.animation = "cloudAnimate 50s linear infinite";
         
         //score
         let playerScore = 0;
         interval = setInterval(scoreCounter,200);
     }
 
+});
+
+// jump
+window.addEventListener("keydown", (e)=>{
+    // console.log(e);
+    if(e.key == "ArrowUp")
+    if(dino.classList != "jump"){
+        dino.classList.add("jump");
+    // remove class after 0.5 seconds    
+        setTimeout(()=>{
+            dino.classList.remove("jump");
+        },500);
+    }
 })
