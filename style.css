@@ -154,7 +154,7 @@ body{
 
 #gameOver{
 
-    /*display none*/
+     display: none;
     font-size: 70px;
     position: absolute;
     left: calc(50% - 181px);
