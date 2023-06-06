@@ -57,7 +57,14 @@ let result = setInterval(()=>{
    //console.log("BlockLeft" + blockLeft);
 
     if(dinoBottom <= 90 && blockLeft >= 20 && blockLeft <= 145){
-        console.log("Game Over");
+    //   console.log("Game Over");
+      
+      gameOver.style.display = "block";
+      block.classList.remove("blockActive");
+      road.firstElementChild.style.animation = "none";
+      cloud.firstElementChild.style.animation = "none";
+      clearInterval(interval);
+      playerScore = 0;
     }
 
 }, 10);
