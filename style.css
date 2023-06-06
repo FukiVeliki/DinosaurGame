@@ -98,7 +98,7 @@ body{
     width: 2000px;
     position: absolute;
     left: 0;
-    animation: roadAnimate 1.25s linear infinite;
+    animation: none;
 }
 
 @keyframes roadAnimate{
@@ -129,7 +129,7 @@ body{
     width: 2000px;
     position: absolute;
     left: -2000px;
-    animation: cloudAnimate 25s linear infinite;
+    animation: none;
 }
 
 @keyframes cloudAnimate{
@@ -139,4 +139,27 @@ body{
     100%{
         left: 100%;
     }
+}
+
+
+
+#score{
+
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+#gameOver{
+
+    /*display none*/
+    font-size: 70px;
+    position: absolute;
+    left: calc(50% - 181px);
+    top: calc(50% - 40px);
+    width: 362px;
+    height: 80px;
+    color: #525252;
 }
