@@ -46,4 +46,18 @@ window.addEventListener("keydown", (e)=>{
             dino.classList.remove("jump");
         },500);
     }
-})
+});
+
+//'Game Over if Character hits the cactus'
+let result = setInterval(()=>{
+   let dinoBottom = parseInt(getComputedStyle(dino).getPropertyValue("bottom"));
+  // console.log("dinoBottom" + dinoBottom);
+
+   let blockLeft = parseInt(getComputedStyle(block).getPropertyValue("left"));
+   //console.log("BlockLeft" + blockLeft);
+
+    if(dinoBottom <= 90 && blockLeft >= 20 && blockLeft <= 145){
+        console.log("Game Over");
+    }
+
+}, 10);
