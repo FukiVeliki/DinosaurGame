@@ -26,7 +26,6 @@ body{
      position: absolute;
      bottom: 28px;
      left: 20px;
-    animation: jump 0.5s linear infinite;
 }
 
 #container #dino img{
@@ -36,11 +35,40 @@ body{
 
 }
 
+.jump{
+    animation: jump 0.5s linear infinite;
+}
+
 @keyframes jump{
     0%,100%{
         bottom: 20px;
     }
     45%,55%{
         bottom: 160px;
+    }
+}
+
+#container #block{
+
+    height: 80px;
+    width: 125px;
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+    animation: blockAnimate 1s linear infinite;
+}
+
+#container #block img{
+
+    height: 80px;
+    width: 125px;
+}
+
+@keyframes blockAnimate{
+    0%{
+        right: -125px;
+    }
+    100%{
+        right: 100%;
     }
 }
