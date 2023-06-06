@@ -19,4 +19,19 @@ let scoreCounter = ()=>{
     score.innerHTML = `Score <b>${playerScore}</b>`;
 }
 
-interval = setInterval(scoreCounter,200);
+//start Game
+//interval = setInterval(scoreCounter,200);
+window.addEventListener("keydown", (start)=>{
+    
+    if(start.code == "Space"){
+        gameOver.style.display = "none";
+        block.classList.add("blockActive");
+        road.firstElementChild.style.animation = "roadAnimate 1.5s linear infinite";
+        cloud.firstElementChild.style.animation = "cloudAnimate 30s linear infinite";
+        
+        //score
+        let playerScore = 0;
+        interval = setInterval(scoreCounter,200);
+    }
+
+})
