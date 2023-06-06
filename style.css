@@ -48,6 +48,10 @@ body{
     }
 }
 
+
+
+
+
 #container #block{
 
     height: 80px;
@@ -55,7 +59,7 @@ body{
     position: absolute;
     bottom: 20px;
     right: -20px;
-    animation: blockAnimate 1s linear infinite;
+    
 }
 
 #container #block img{
@@ -64,11 +68,44 @@ body{
     width: 125px;
 }
 
+.blockActive{
+    animation: blockAnimate 1s linear infinite;
+}
+
 @keyframes blockAnimate{
     0%{
         right: -125px;
     }
     100%{
         right: 100%;
+    }
+}
+
+
+
+
+#container #road{
+
+    height: 30px;
+    width: 1200px;
+    position: absolute;
+    bottom: 0;
+}
+
+#container #road img{
+
+    height: 30px;
+    width: 2000px;
+    position: absolute;
+    left: 0;
+    animation: roadAnimate 1s linear infinite;
+}
+
+@keyframes roadAnimate{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -800px;
     }
 }
