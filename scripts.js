@@ -35,6 +35,20 @@ window.addEventListener("keydown", (start)=>{
 
 });
 
+// random obstacles feature (Profesore ako citate za ovo sam hteo da vas pitam,
+//                            ne znam kako da napravim da random slike generatea a
+//                             da ne mora da se refresha stranica)
+
+/*window.onload = choosePic;
+
+var myPix = new Array("assets/block.png","assets/cactus1.png");
+
+function choosePic() {
+     var randomNum = Math.floor(Math.random() * myPix.length);
+     document.getElementById("myPicture").src = myPix[randomNum];
+}
+*/
+
 // jump
 window.addEventListener("keydown", (e)=>{
     // console.log(e);
